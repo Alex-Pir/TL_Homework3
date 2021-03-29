@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net46</TargetFramework>
+    <TargetFramework>net5</TargetFramework>
     <AssemblyName>Lesson.Libs.Common.Types</AssemblyName>
     <RootNamespace>Lesson.Libs.Common.Types</RootNamespace>
     <CodeAnalysisRuleSet>../../CodeAnalyzers/Lesson.ruleset</CodeAnalysisRuleSet>

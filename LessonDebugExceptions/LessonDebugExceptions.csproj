@@ -1,6 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5</TargetFramework>
+    <AssemblyName>Lesson.LessonDebugExceptions</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <CodeAnalysisRuleSet>../CodeAnalyzers/Lesson.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
@@ -31,11 +37,5 @@
     <ProjectReference Include="..\Libs\Common.Types.Extensions\Common.Types.Extensions.csproj" />
     <ProjectReference Include="..\Libs\Common.Types\Common.Types.csproj" />
   </ItemGroup>
-
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net46</TargetFramework>
-    <AssemblyName>Lesson.LessonDebugExceptions</AssemblyName>
-  </PropertyGroup>
 
 </Project>
