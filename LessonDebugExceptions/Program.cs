@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Lesson.Libs.Common.Types;
+using Lesson.Libs.Common.Types.Extensions;
 using Lesson.Libs.Common.Types.Extensions.Comparers;
 
 namespace LessonDebugExceptions
@@ -8,7 +10,7 @@ namespace LessonDebugExceptions
     public static class Program
     {
         public static void Main()
-        {
+        {/*
             var dates = new Dictionary<DateTime, DateTime>
             {
                 {
@@ -54,7 +56,11 @@ namespace LessonDebugExceptions
             Console.WriteLine( $"Expected: {expectedDateRangePackage}" );
 
             Console.WriteLine( "Press ENTER to end execution..." );
-            Console.ReadLine();
+            Console.ReadLine();*/
+            var dateRange1 = new DateRange( new DateTime( 2016, 6, 15, 12, 0, 0 ), new DateTime( 2016, 6, 18, 12, 0, 0 ) );
+            var dateRange2 = new DateRange( new DateTime( 2016, 6, 13, 14, 0, 0 ), new DateTime( 2016, 6, 19, 12, 0, 0 ) );
+
+            dateRange1.SubtractDates( dateRange2, false );
         }
     }
 }

@@ -308,7 +308,7 @@ namespace Lesson.Libs.Common.Types.Extensions.Test
         [TestMethod]
         public void DateRangeExtensions_EqualTo_DateRangesAreEqual_ReturnTrue()
         {
-            var dateRange1 = new DateRange( new DateTime( 2016, 6, 15, 12, 0, 0 ), new DateTime( 2016, 6, 18, 13, 0, 0 ) );
+            var dateRange1 = new DateRange( new DateTime( 2016, 6, 15, 12, 0, 0 ), new DateTime( 2016, 6, 18, 12, 0, 0 ) );
             var dateRange2 = new DateRange( new DateTime( 2016, 6, 15, 12, 0, 0 ), new DateTime( 2016, 6, 18, 12, 0, 0 ) );
 
             bool equalityResult = dateRange1.EqualTo( dateRange2 );
@@ -578,7 +578,7 @@ namespace Lesson.Libs.Common.Types.Extensions.Test
             Assert.AreEqual( new DateTime( 2019, 1, 1 ), result.ElementAt( 1 ).EndDateTime );
             Assert.AreEqual( new DateTime( 2019, 2, 1 ), result.ElementAt( 2 ).StartDateTime );
             Assert.AreEqual( new DateTime( 2020, 12, 1 ), result.ElementAt( 2 ).EndDateTime );
-            Assert.AreEqual( new DateTime( 2021, 11, 1 ), result.ElementAt( 3 ).StartDateTime );
+            Assert.AreEqual( new DateTime( 2022, 11, 1 ), result.ElementAt( 3 ).StartDateTime );
             Assert.AreEqual( DateTime.MaxValue, result.ElementAt( 3 ).EndDateTime );
         }
 
@@ -596,9 +596,9 @@ namespace Lesson.Libs.Common.Types.Extensions.Test
             SortedSet<DateRange> result = dateRanges.JoinDateRanges();
 
             // Assert
-            Assert.AreEqual( 1, result.Count );
-            Assert.AreEqual( new DateTime( 2019, 2, 1 ), result.ElementAt( 0 ).StartDateTime );
-            Assert.AreEqual( new DateTime( 2019, 5, 1 ), result.ElementAt( 0 ).EndDateTime );
+            Assert.AreEqual( 2, result.Count );
+            Assert.AreEqual( new DateTime( 2019, 3, 1 ), result.ElementAt( 0 ).StartDateTime );
+            Assert.AreEqual( new DateTime( 2019, 4, 1 ), result.ElementAt( 0 ).EndDateTime );
         }
 
         [TestMethod]
